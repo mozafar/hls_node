@@ -1,5 +1,7 @@
 const Http = require('http');
 const Express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
 
 const HTTP_PORT = 80;
 const HTTP_WEBROOT = './public';
@@ -18,6 +20,8 @@ class NodeHLSServer {
         this.config = config;
 
         let app = Express();
+        app.use(helmet());
+        app.use(cors());
         app.use(CookieParser());
 
         /**
