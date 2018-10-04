@@ -8,7 +8,7 @@ const HTTP_WEBROOT = './public';
 const HTTP_MEDIAROOT = 'media';
 const Logger = require('./nodeLogger');
 const CookieParser = require('cookie-parser');
-const Auth = require('./testAuthMiddleware');
+const Auth = require('./authMiddleware');
 const hlsController = require('./hlsController');
 
 
